@@ -119,43 +119,48 @@
         <div class="bg-gray-700 p-2 text-white text-lg sm:text-xl">
           Lorem ipsum dolor ist amet.
         </div>
-        <div class="mt-3 mb-2 flex h-[24%]">
-          <div class="h-full w-full sm:w-[30%]">
-            <img src="https://shorturl.at/dJF6q" alt="Loading..." class="h-full w-full">
-          </div>
-          <div class="pl-1 text-xs sm:text-sm">
+        <div class="flex">
+          <marquee behavior="" direction="up">
+            <div class="mt-3 mb-2 flex">
+              <div class="h-full w-full h-12">
+                <img src="https://shorturl.at/dJF6q" alt="Loading..." class="h-full w-full">
+              </div>
+              <div class="pl-1 text-xs sm:text-sm">
+                <a href="newModel.html" target="_blank">
+                  It is a long established fact that a reader will be distracted by the readable content...
+                </a>
+              </div>
+            </div>
+    
+            <div class="mt-3 mb-2 flex">
+              <div class="h-full w-full h-12">
+                <img src="https://shorturl.at/Bmybi" alt="Loading..." class="h-full w-full">
+              </div>
+              <div class="pl-1 text-xs sm:text-sm">
+                <a href="newModel.html" target="_blank">
+                  It is a long established fact that a reader will be distracted by the readable content...
+                </a>
+              </div>
+            </div>
+    
+            <div class="mt-3 mb-2 flex">
+              <div class="h-full w-full h-12">
+                <img src="https://shorturl.at/XtdMV" alt="Loading..." class="h-full w-full">
+              </div>
+              <div class="pl-1 text-xs sm:text-sm">
+                <a href="newModel.html" target="_blank">
+                  It is a long established fact that a reader will be distracted by the readable content...
+                </a>
+              </div>
+          </marquee>
+          
+          </div>  
+          <div class="text-center text-red-700 cursor-pointer">
             <a href="newModel.html" target="_blank">
-              It is a long established fact that a reader will be distracted by the readable content...
+              Read more
+              <i class="fas fa-angles-down text-xl text-red-700"></i>
             </a>
           </div>
-        </div>
-
-        <div class="mt-3 mb-2 flex h-[24%]">
-          <div class="h-full w-full sm:w-[30%]">
-            <img src="https://shorturl.at/Bmybi" alt="Loading..." class="h-full w-full">
-          </div>
-          <div class="pl-1 text-xs sm:text-sm">
-            <a href="newModel.html" target="_blank">
-              It is a long established fact that a reader will be distracted by the readable content...
-            </a>
-          </div>
-        </div>
-
-        <div class="mt-3 mb-2 flex h-[23%]">
-          <div class="h-full w-full sm:w-[30%]">
-            <img src="https://shorturl.at/XtdMV" alt="Loading..." class="h-full w-full">
-          </div>
-          <div class="pl-1 text-xs sm:text-sm">
-            <a href="newModel.html" target="_blank">
-              It is a long established fact that a reader will be distracted by the readable content...
-            </a>
-          </div>
-        </div>  
-        <div class="text-center text-red-700 cursor-pointer">
-          <a href="newModel.html" target="_blank">
-            Read more
-            <i class="fas fa-angles-down text-xl text-gray-600"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -168,32 +173,17 @@
         <div class="bg-gray-700 p-2 mt-3 text-lg text-white w-full sm:w-[35%]">NEWS LETTER [EMAIL]</div>
         <div class="bg-gray-700 p-2 mt-3 text-lg ml-[25%] text-white w-full sm:w-[10%] h-[40px]"></div>
       </div>
-      <div class="w-full sm:w-[30%] flex justify-between mt-3 sm:mt-0">
-        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12">SM</div>
-        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12">SM</div>
-        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12">SM</div>
-        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12">SM</div>
+      <div class="w-full sm:w-[30%] flex justify-between mt-3 text-white">
+        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12 flex items-center justify-center">SM</div>
+        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12 flex items-center justify-center">SM</div>
+        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12 flex items-center justify-center">SM</div>
+        <div class="bg-gray-700 h-8 w-8 sm:h-12 sm:w-12 flex items-center justify-center">SM</div>
       </div>
     </div>
     <!-- Footer Section End -->
 
   </div> 
 
-  <script>
-    function toggleMobileMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("hidden");
-    }
-
-    function jumpToImage(index) {
-      const sliderImage = document.getElementById("sliderImage");
-      sliderImage.src = `https://via.placeholder.com/600x300?text=Banner+${index}`;
-    }
-
-    function handleSearch(query) {
-      console.log('Searching for:', query);
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
