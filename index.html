@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <title>Landing Page</title>
+</head>
+<body>
+  <div class="w-full h-full mb-4">
+    <!-- Header Start -->
+    <div class="mt-3">
+     
+    <header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+      <div>
+        <img src="https://shorturl.at/6Shsg" alt="" class="h-5 w-50 sm:h-8 sm:w-40 md:h-10 md:w-48">
+      </div>
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="p-2 pr-10 rounded text-white sm:w-30 md:w-50" oninput="handleSearch(this.value)">
+        <i class="fas fa-search absolute right-3 top-2.5 text-gray-500"></i>
+      </div>
+    </header>
+    </div>
+    <!-- Header End -->
+
+    <!-- Navbar Start -->
+    <div class="mt-3 bg-gray-500">
+      <nav class="text-white p-4 mt-3 text-xl font-semibold">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <!-- Links -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:bg-gray-900 px-3 py-2 rounded-md">Home</a>
+            <a href="#about" class="hover:bg-gray-900 px-3 py-2 rounded-md">About</a>
+            <a href="#services" class="hover:bg-gray-900 px-3 py-2 rounded-md">Services</a>
+            <a href="#contact" class="hover:bg-gray-900 px-3 py-2 rounded-md">Contact</a>
+          </div>
+  
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="mobileMenuBtn" class="text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden bg-gray-600 text-white space-y-4 py-4 px-6 hidden">
+        <a href="#home" class="block hover:bg-gray-900 px-3 py-2 rounded-md">Home</a>
+        <a href="#about" class="block hover:bg-gray-900 px-3 py-2 rounded-md">About</a>
+        <a href="#services" class="block hover:bg-gray-900 px-3 py-2 rounded-md">Services</a>
+        <a href="#contact" class="block hover:bg-gray-900 px-3 py-2 rounded-md">Contact</a>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Image Slider Start -->
+    <div class="mt-3 w-full">
+      <div class="flex gap-3">
+
+        <!-- Slider -->
+        <div class="relative w-[75%] rounded overflow-hidden shadow-lg">
+          <img id="sliderImage"
+               src=""
+               alt="Loading..."
+               class="w-[100%] h-[300px] rounded" />
+        </div>
+    
+        <!-- Control Buttons -->
+        <div class="flex flex-col justify-center gap-2  w-[25%] h-full align-center">
+          <button onclick="jumpToImage(5)" class="bg-gray-700 text-white px-3 py-2 rounded h-[70px] ">Banner 1</button>
+          <button onclick="jumpToImage(10)" class="bg-gray-700 text-white px-3 py-2 rounded h-[70px]">Banner 2</button>
+          <button onclick="jumpToImage(15)" class="bg-gray-700 text-white px-3 py-2 rounded h-[70px]">Banner 3</button>
+          <button onclick="jumpToImage(20)" class="bg-gray-700 text-white px-3 py-2 rounded h-[70px]">Banner 4</button>
+        </div>
+      </div>
+    </div>
+    <!-- Image Slider End -->
+
+    <!-- Main Section Start -->
+    <div class="mt-3 flex gap-3">
+      <div class="w-[75%]">
+        <div>
+          <div class="bg-gray-700 p-2 text-white text-lg">
+            What is Lorem Ipsum?
+          </div>
+          <div class="bg-gray-500 p-3 pt-6 pb-4 text-white text-semibold ">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <div class="bg-gray-700 p-2 text-white text-lg">
+            <marquee>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+            </marquee>
+          </div>
+        </div>
+        <div class="mt-3 flex gap-2 w-[100%] align-center justify-between">
+          <div class="w-[22%] hover:w-[30%]">
+            <img src="https://shorturl.at/oe70N" alt="Loading..." >
+          </div>
+          <div class="w-[22%] hover:w-[30%]">
+            <img src="https://tinyurl.com/tctva9sn" alt="Loading...">
+          </div>
+          <div class="w-[22%] hover:w-[30%]">
+            <img src="https://shorturl.at/Sfeh1" alt="Loading...">
+          </div>
+          <div class="w-[22%] hover:w-[30%]">
+            <img src="https://shorturl.at/AFoX0" alt="Loading...">
+          </div>
+        </div>
+        
+      </div>
+      <div class="w-[25%] bg-gray-500 text-white text-semibold">
+        <div class="bg-gray-700 p-2 text-white text-lg">
+          Lorem ipsum dolor ist amet.
+        </div>
+        <div class="mt-3 mb-2 flex h-[24%]">
+          <div class="h-full w-full">
+            <img src="https://shorturl.at/dJF6q" alt="Loading..." class="h-[100%]">
+          </div>
+          <div class="pl-1 text-sm">
+            <a href="newModel.html" target="_blank">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-3 mb-2 flex h-[24%]">
+          <div class="h-full w-full">
+            <img src="https://shorturl.at/Bmybi" alt="Loading..." class="h-[100%]">
+          </div>
+          <div class="pl-1 text-sm">
+            <a href="newModel.html" target="_blank">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-3 mb-2 flex h-[23%]">
+          <div class="h-full w-full">
+            <img src="https://shorturl.at/XtdMV" alt="Loading..." class="h-[100%]">
+          </div>
+          <div class="pl-1 text-sm">
+            <a href="newModel.html" target="_blank">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            </a>
+          </div>
+        </div>  
+        <div class="text-center text-red-700 cursor-pointer">
+          <a href="newModel.html" target="_blank">
+            Read more
+          <i class="fas fa-angles-down text-xl text-gray-600"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Main Section End -->
+
+    <!-- Footer Section Start -->
+    <div class="mt-3  pt-4 pb-4 flex bg-gray-500">
+      <div class="w-[75%]">
+        <div class="bg-gray-700 p-2 text-lg text-white w-[35%]">NEWS LETTER [NAME]</div>
+        <div class="bg-gray-700 p-2 mt-3 text-lg text-white w-[35%]">NEWS LETTER [EMAIL]</div>
+        <div class="bg-gray-700 p-2 mt-3 text-lg ml-[25%] text-white w-[10%] h-[40px]"></div>
+      </div>
+      <div class="w-[25%] flex justify-between">
+        <div class="bg-gray-700 h-15 w-15">SM</div>
+        <div class="bg-gray-700 h-15 w-15">SM</div>
+        <div class="bg-gray-700 h-15 w-15">SM</div>
+        <div class="bg-gray-700 h-15 w-15">SM</div>
+
+      </div>
+    </div>
+    <!-- Footer Section End -->
+
+  </div> 
+    
+    
+
+  <script src="script.js"></script>
+
+</body>
+</html>
